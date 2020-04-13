@@ -1,0 +1,57 @@
+@import "_variables";
+@import "_mixins";
+@import "_buttons";
+
+// body {
+//   background-color: $bg;
+// }
+
+// a {
+//   color: $bg;
+//   font-size: $title;
+// }
+
+// .box {
+//   margin-top: 50px;
+//   h2 {
+//     color: blue;
+//     &:hover {
+//       color: green;
+//     }
+//   }
+
+//   button {
+//     color: red;
+//   }
+//   &:hover {
+//     background-color: black;
+//   }
+// }
+
+// h1 {
+//   @include sexyTitle();
+// }
+
+// a {
+//   margin-bottom: 10px;
+//   &:nth-child(odd) {
+//     @include link("odd");
+//   }
+
+//   &:nth-child(even) {
+//     @include link("even");
+//   }
+// }
+
+h3 {
+  color: red;
+  @include responsive("iphone") {
+    color: yellow;
+  }
+  @include responsive("iphone-l") {
+    font-size: 50px;
+  }
+  @include responsive("tablet") {
+    color: green;
+  }
+}

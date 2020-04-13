@@ -1,0 +1,41 @@
+@mixin sexyTitle {
+  color: green;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+@mixin link($word) {
+  text-decoration: none;
+  display: block;
+  @if $word == "odd" {
+    color: blue;
+  } @else {
+    color: royalblue;
+  }
+  //   color: $color;
+}
+
+$minIphone: 300px;
+$maxIphone: 600px;
+$minTablet: 601px;
+$maxTablet: 900px;
+
+@mixin responsive($device) {
+  @if $device == "iphone" {
+    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) {
+      @content;
+    }
+  } @else if $device == "tablet" {
+    @media screen and (min-width: $minTablet) and(max-width: $maxTablet) {
+      @content;
+    }
+  } @else if $device == "ipohne-l" {
+    @media screen and (min-width: $minIphone) and (max-width: $maxIphone) and (orientation: landscape) {
+      @content;
+    }
+  } @else if $device == "ipad-l" {
+    @media screen and (min-width: $minTablet) and (max-width: $maxTablet) and (orientation: landscape) {
+      @content;
+    }
+  }
+}

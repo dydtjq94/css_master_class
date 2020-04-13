@@ -1,0 +1,19 @@
+.box_container {
+  display: flex;
+  height: 100vh;
+  /* flex-wrap: wrap-reverse; */
+  justify-content: space-between;
+  /* flex-direction: row-reverse; */
+  align-content: center;
+}
+
+.box {
+  background-color: red;
+  border: blue 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  color: white;
+}
